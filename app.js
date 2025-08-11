@@ -13,15 +13,17 @@ function agregarJugador() {
     if (listaNombresJugadores.includes(nombre)) {
         console.log(`El jugador ${nombre} ya está registrado.`);
     } else {
-        // Si el nombre no está en la lista, agregarlo
+        // Validar la longitud del nombre
         if (nombre.length < 3) {
             console.log("El nombre del jugador debe tener al menos 3 caracteres.");
             return;
         }       
+        // Validar la longitud máxima del nombre
         if (nombre.length > 20) {
             console.log("El nombre del jugador no puede tener más de 20 caracteres.");
             return;
         }
+        // Si el nombre no está en la lista, agregarlo
         listaNombresJugadores.push(nombre);
         console.log(`Jugador ${nombre} agregado exitosamente.`);
     }
