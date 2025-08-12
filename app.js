@@ -25,10 +25,32 @@ function agregarJugador() {
         }
         // Si el nombre no está en la lista, agregarlo
         listaNombresJugadores.push(nombre);
-        console.log(`Jugador ${nombre} agregado exitosamente.`);
-    }
+        console.log(`Jugador ${nombre} agregado exitosamente.`);  
+    mostrarJugadores();   
+    }  
+}  
+ // Función para mostrar la lista de jugadores
+function mostrarJugadores() {
+    
+    console.log("Lista de jugadores registrados:");
+    let lista = "";
+    listaNombresJugadores.forEach((jugador, i) => {
+        console.log(`${i + 1}. ${jugador}`);
+        lista += `${i + 1}. ${jugador}<br>`;
+    });
+    asignarTextoDOM(lista); 
+}   
+
+
+// funcion asignar texto dom 
+function asignarTextoDOM(texto) {
+    const elementoDOM = document.getElementById("listaAmigos");
+    elementoDOM.innerHTML = texto;
 }  
 
+
+
+     
 
 
 
