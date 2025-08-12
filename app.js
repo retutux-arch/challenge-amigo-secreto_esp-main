@@ -1,11 +1,5 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-let listaNombresJugadores = [];
-// funcion para asignar el elemento del DOM
-function asignarElementoDOM(elemento) { 
-    const elementoDOM = document.getElementById('amigo');
-    elementoDOM.innerHTML = elemento;
-}   
-
+let listaNombresJugadores = []; 
 // Función para agregar un jugador a la lista
 function agregarJugador() {
     let nombre = document.getElementById('amigo').value;    
