@@ -46,12 +46,12 @@ function mostrarJugadores() {
         console.log(`${i + 1}. ${jugador}`);
         lista += `${i + 1}. ${jugador}<br>`;
     });
-    asignarTextolistaAmigos(lista); 
+    asignarTextoListaAmigos(lista); 
 }   
 
 
 //funcion asignar texto a la lista de amigos 
-function asignarTextolistaAmigos(texto) {
+function asignarTextoListaAmigos(texto) {
     const elementoDOM = document.getElementById("listaAmigos");
     elementoDOM.innerHTML = texto;
 }  
