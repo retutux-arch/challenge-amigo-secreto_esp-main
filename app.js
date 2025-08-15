@@ -1,7 +1,8 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let listaNombresJugadores = []; 
+let jugadoresSorteados = []; 
 
-// Funcion para asignar texto a elemento h2
+// Función para asignar texto a elemento h2
 function asignarTextoDOM(texto) {
     const elementoDOM = document.querySelector(".section-title");       
     elementoDOM.innerHTML = texto;
@@ -18,6 +19,7 @@ function agregarJugador() {
         asignarTextoDOM(`El jugador ${nombre} ya está registrado.`);
         return; 
     } else {
+
         // Validar la longitud del nombre
         if (nombre.length < 3) {
             console.log("El nombre del jugador debe tener al menos 3 caracteres.");
@@ -35,8 +37,11 @@ function agregarJugador() {
         console.log(`Jugador ${nombre} agregado exitosamente.`); 
         asignarTextoDOM(`Jugador ${nombre} agregado exitosamente.`); 
     mostrarJugadores();   
+    document.getElementById('amigo').value = ""; // Limpiar el campo de entrada
+    return;
     }  
 }  
+
  // Función para mostrar la lista de jugadores
 function mostrarJugadores() {
     
@@ -49,24 +54,44 @@ function mostrarJugadores() {
     asignarTextoListaAmigos(lista); 
 }   
 
-
-//funcion asignar texto a la lista de amigos 
+//Función asignar texto a la lista de amigos 
 function asignarTextoListaAmigos(texto) {
     const elementoDOM = document.getElementById("listaAmigos");
     elementoDOM.innerHTML = texto;
 }  
 
-//funcion sortear jugador incompleta
+//Función sortear jugador
 function sortearJugador() {
     if (listaNombresJugadores.length === 0) {
         console.log("No hay jugadores registrados para sortear.");
+        asignarTextoDOM("No hay jugadores registrados para sortear.");
         return;
-    }
-    const indiceAleatorio = Math.floor(Math.random() * listaNombresJugadores.length);
-    const jugadorSeleccionado = listaNombresJugadores[indiceAleatorio];
-    console.log(`El jugador seleccionado es: ${jugadorSeleccionado}`);
-    asignarTextoDOM(`El jugador seleccionado es: ${jugadorSeleccionado}`);
+        // Si no hay jugadores registrados, muestra un mensaje.
+    } if (jugadoresSorteados.length === listaNombresJugadores.length) {
+        console.log("Todos los jugadores ya han sido sorteados.");
+        asignarTextoDOM("Todos los jugadores ya han sido sorteados.");
+
+        // Reiniciar procesos
+        jugadoresSorteados = [];
+        listaNombresJugadores = [];
+        mostrarJugadores();
+        return; }   
+
+        // Filtra los jugadores que aún no han sido sorteados   
+        const jugadoresRestantes = listaNombresJugadores.filter(jugador => !jugadoresSorteados.includes(jugador));
+
+        //Seleccionar aleatoriamente jugadores restantes  
+        const indiceAleatorio = Math.floor(Math.random() * jugadoresRestantes.length);
+        const jugadorSeleccionado = jugadoresRestantes[indiceAleatorio];
+        
+        // Agregar el jugador seleccionado a la lista de sorteados
+        jugadoresSorteados.push(jugadorSeleccionado);
+        console.log(`El jugador seleccionado es: ${jugadorSeleccionado}`);
+        asignarTextoDOM(`El jugador seleccionado es: ${jugadorSeleccionado}`);
+
+        return ;
 }
+
 
      
 
