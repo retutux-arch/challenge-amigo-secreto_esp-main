@@ -8,12 +8,7 @@ function asignarTextoDOM(texto) {
     elementoDOM.innerHTML = texto;
     return;
 }
-//función cambiar texto botón sortear amigo
-function cambiarTextoBotonSortear(texto) {
-    const elementoDOM = document.querySelector(".button-draw");
-    elementoDOM.innerHTML = texto;
-    return;
-}
+
 
 
 // Función para agregar un jugador a la lista
