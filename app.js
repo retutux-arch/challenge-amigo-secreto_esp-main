@@ -13,7 +13,8 @@ function asignarTextoDOM(texto) {
 
 // Función para agregar un jugador a la lista
 function agregarJugador() {
-    let nombre = document.getElementById('amigo').value;    
+    let nombre = document.getElementById('amigo').value; 
+
     // Verificar si el nombre ya está en la lista  
     if (listaNombresJugadores.includes(nombre)) {
         console.log(`El jugador ${nombre} ya está registrado.`);
@@ -94,8 +95,16 @@ function sortearJugador() {
         console.log(`El jugador seleccionado es: ${jugadorSeleccionado}`);
         asignarTextoDOM(`El jugador seleccionado es: ${jugadorSeleccionado}`);
 
-        return;
-
+        mostrarResultado(jugadorSeleccionado);
+}
+// Mostrar resultado en <ul id="resultado">
+function mostrarResultado(nombre) {
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = ""; // Limpiar contenido anterior
+    const item = document.createElement("li");
+    item.textContent = nombre;
+    resultado.appendChild(item);
+}
         // Función para reiniciar el juego
 function reiniciarJuego() {
     listaNombresJugadores = [];
@@ -109,6 +118,5 @@ function reiniciarJuego() {
     const botonSortear = document.querySelector(".button-draw");
     botonSortear.innerHTML = `<img src="assets/play_circle_outline.png" alt="Ícono para sortear"> Sortear amigo`;
     botonSortear.onclick = sortearJugador;
-   }
 
 }  
