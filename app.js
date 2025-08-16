@@ -2,14 +2,14 @@
 let listaNombresJugadores = []; 
 let jugadoresSorteados = []; 
 
+// Capturar mensaje de bienvenida
+const mensajeInicial = document.querySelector(".section-title").innerHTML;
+
 // Función para asignar texto a elemento h2
 function asignarTextoDOM(texto) {
     const elementoDOM = document.querySelector(".section-title");       
     elementoDOM.innerHTML = texto;
-    return;
-}
-
-
+    return;}
 
 // Función para agregar un jugador a la lista
 function agregarJugador() {
@@ -63,6 +63,9 @@ function asignarTextoListaAmigos(texto) {
 
 //Función sortear jugador
 function sortearJugador() {
+    const botonSortear = document.querySelector(".button-draw");
+
+    // Verificar si hay jugadores registrados
     if (listaNombresJugadores.length === 0) {
         console.log("No hay jugadores registrados para sortear.");
         asignarTextoDOM("No hay jugadores registrados para sortear.");
@@ -72,12 +75,11 @@ function sortearJugador() {
         console.log("Todos los jugadores ya han sido sorteados.");
         asignarTextoDOM("Todos los jugadores ya han sido sorteados.");
 
-        // Reiniciar procesos
-        jugadoresSorteados = [];
-        listaNombresJugadores = [];
-        mostrarJugadores();
-        cambiarTextoBotonSortear("Reiniciar");
-        return; 
+        // Cambiar botón a modo reinicio
+        botonSortear.innerHTML = `<img src="assets/play_circle_outline.png" alt="Ícono para reiniciar"> Reiniciar`;
+        botonSortear.onclick = reiniciarJuego;
+        return;
+        
     }   
 
         // Filtra los jugadores que aún no han sido sorteados   
@@ -92,13 +94,21 @@ function sortearJugador() {
         console.log(`El jugador seleccionado es: ${jugadorSeleccionado}`);
         asignarTextoDOM(`El jugador seleccionado es: ${jugadorSeleccionado}`);
 
-        return ;
-}
+        return;
 
+        // Función para reiniciar el juego
+function reiniciarJuego() {
+    listaNombresJugadores = [];
+    jugadoresSorteados = [];
 
-     
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
 
+    asignarTextoDOM(mensajeInicial);
 
+    const botonSortear = document.querySelector(".button-draw");
+    botonSortear.innerHTML = `<img src="assets/play_circle_outline.png" alt="Ícono para sortear"> Sortear amigo`;
+    botonSortear.onclick = sortearJugador;
+   }
 
-
-
+}  
