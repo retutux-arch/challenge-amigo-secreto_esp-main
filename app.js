@@ -13,7 +13,8 @@ function asignarTextoDOM(texto) {
 
 // Función para agregar un jugador a la lista
 function agregarJugador() {
-    let nombre = document.getElementById('amigo').value; 
+    let nombre = document.getElementById('amigo').value;
+    nombre = nombre.trim(); // Eliminar espacios en blanco al inicio y al final
 
     // Verificar si el nombre ya está en la lista  
     if (listaNombresJugadores.includes(nombre)) {
@@ -25,6 +26,7 @@ function agregarJugador() {
         // Validar la longitud del nombre
         if (nombre.length < 3) {
             console.log("El nombre del jugador debe tener al menos 3 caracteres.");
+            alert("Ingresa un nombre válido.");
             asignarTextoDOM("El nombre del jugador debe tener al menos 3 caracteres.");
             return;
         }       
