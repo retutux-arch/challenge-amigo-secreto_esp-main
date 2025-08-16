@@ -8,6 +8,12 @@ function asignarTextoDOM(texto) {
     elementoDOM.innerHTML = texto;
     return;
 }
+//función cambiar texto botón sortear amigo
+function cambiarTextoBotonSortear(texto) {
+    const elementoDOM = document.querySelector(".button-draw");
+    elementoDOM.innerHTML = texto;
+    return;
+}
 
 
 // Función para agregar un jugador a la lista
@@ -75,7 +81,9 @@ function sortearJugador() {
         jugadoresSorteados = [];
         listaNombresJugadores = [];
         mostrarJugadores();
-        return; }   
+        cambiarTextoBotonSortear("Reiniciar");
+        return; 
+    }   
 
         // Filtra los jugadores que aún no han sido sorteados   
         const jugadoresRestantes = listaNombresJugadores.filter(jugador => !jugadoresSorteados.includes(jugador));
