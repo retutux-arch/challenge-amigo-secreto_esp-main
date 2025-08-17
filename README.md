@@ -1,11 +1,11 @@
 <h1 align="center"> ✨ Sorteador de Jugadores / Amigo secreto ✨ </h1>
 <!-- Si tienes un logo o una imagen de portada, agrégala aquí. -->
 
-<!-- Ejemplo:
+
 <p align="center">
-<img src="URL_DE_TU_IMAGEN_DE_PORTADA" alt="Una imagen que representa un sorteo o el logo de la aplicación">
+<img src="https://github.com/retutux-arch/challenge-amigo-secreto_esp-main/blob/main/assets/Portada%20Juego%20amigo%20secreto.gif?raw=true)" alt="Una imagen que representa un sorteo o el logo de la aplicación">
 </p>
--->
+
 
 <!-- Insignias (Badges)
 Puedes usar servicios como Shields.io para generar insignias.
