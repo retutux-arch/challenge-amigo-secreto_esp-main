@@ -67,9 +67,8 @@ CSS: Implícito para la presentación visual de la interfaz.
 JavaScript: Lenguaje de programación principal que gestiona toda la lógica del sorteo, la manipulación del DOM y las interacciones del usuario.
 
 🤝 Autores
-<!-- Aquí es donde te agregas a ti mismo y a cualquier colaborador. -->
 
-<img src="URL_DE_TU_FOTO_DE_PERFIL" width=100><br><sub>Nombre Completo</sub>
+<img src="https://avatars.githubusercontent.com/u/225441026?v=4" width=100><br><sub>Ariel Antonio Lobos Nuñez</sub>
 
 📄 Licencia
-Este proyecto está bajo la Licencia Nombre de la Licencia.
+Este proyecto está bajo la Licencia "MIT License".
