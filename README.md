@@ -1,5 +1,4 @@
-<h1 align="center"> ✨ Sorteador de Jugadores / Amigo secreto ✨ </h1>
-<!-- Si tienes un logo o una imagen de portada, agrégala aquí. -->
+<h1 align="center"> ✨ La Ruleta de los Nombres / Amigo secreto ✨ </h1>
 
 
 <p align="center">
@@ -45,7 +44,7 @@ Manejo de sorteos: La aplicación lleva un registro de los jugadores ya sorteado
 
 Reiniciar: Ofrece la opción de limpiar las listas y comenzar un nuevo sorteo desde cero.
 
-<!-- Si tienes un GIF o un video de demostración, agrégalo aquí. -->
+
 
 📁 Acceso al Proyecto
 Este proyecto es una aplicación de navegador y se puede ejecutar localmente.
