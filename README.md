@@ -7,9 +7,11 @@
 </p>
 
 
-<!-- Insignias (Badges)
-Puedes usar servicios como Shields.io para generar insignias.
-Aquí hay algunos ejemplos: -->
+![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
+![Versión](https://img.shields.io/badge/Versi%C3%B3n-1.0-blue)
+![GitHub stars](https://img.shields.io/github/stars/retutux-arch/challenge-amigo-secreto_esp-main?style=social)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/retutux-arch/challenge-amigo-secreto_esp-main)
+![Licencia](https://img.shields.io/github/license/retutux-arch/challenge-amigo-secreto_esp-main)
 
 📋 Índice
 Descripción del Proyecto
