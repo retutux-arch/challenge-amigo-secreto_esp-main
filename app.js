@@ -15,6 +15,13 @@ function asignarTextoDOM(texto) {
 function agregarJugador() {
     let nombre = document.getElementById('amigo').value;
     nombre = nombre.trim(); // Eliminar espacios en blanco al inicio y al final
+    // Validar el no uso de números en el nombre
+    if (/\d/.test(nombre)) {
+        console.log("El nombre del jugador no puede contener números.");
+        asignarTextoDOM("El nombre del jugador no puede contener números.");
+        alert("Ingresa un nombre válido.");
+        return; 
+    }
 
     // Verificar si el nombre ya está en la lista  
     if (listaNombresJugadores.includes(nombre)) {
