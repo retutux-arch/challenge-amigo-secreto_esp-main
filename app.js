@@ -15,6 +15,7 @@ function asignarTextoDOM(texto) {
 function agregarJugador() {
     let nombre = document.getElementById('amigo').value;
     nombre = nombre.trim(); // Eliminar espacios en blanco al inicio y al final
+    
     // Validar el no uso de números en el nombre
     if (/\d/.test(nombre)) {
         console.log("El nombre del jugador no puede contener números.");
@@ -47,9 +48,9 @@ function agregarJugador() {
         listaNombresJugadores.push(nombre);
         console.log(`Jugador ${nombre} agregado exitosamente.`); 
         asignarTextoDOM(`Jugador ${nombre} agregado exitosamente.`); 
-    mostrarJugadores();   
-    document.getElementById('amigo').value = ""; // Limpiar el campo de entrada
-    return;
+        mostrarJugadores();   
+        document.getElementById('amigo').value = ""; // Limpiar el campo de entrada
+        return;
     }  
 }  
 
@@ -114,7 +115,7 @@ function mostrarResultado(nombre) {
     item.textContent = nombre;
     resultado.appendChild(item);
 }
-        // Función para reiniciar el juego
+// Función para reiniciar el juego
 function reiniciarJuego() {
     listaNombresJugadores = [];
     jugadoresSorteados = [];
