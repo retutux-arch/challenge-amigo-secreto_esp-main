@@ -44,6 +44,15 @@ function agregarJugador() {
             asignarTextoDOM("El nombre del jugador no puede tener más de 20 caracteres.");
             return;
         }
+        //Validar no uso de caractres especiales
+        const regex = /^[a-zA-ZÀ-ÿ\s]+$/; // Permite letras (mayúsculas y minúsculas), acentos y espacios
+        if (!regex.test(nombre)) {
+            console.log("El nombre no debe contener números ni caracteres especiales.");
+            asignarTextoDOM("El nombre solo puede contener letras y espacios.");
+            alert("Ingresa un nombre válido.");
+            return;
+        }
+
         // Si el nombre no está en la lista, agregarlo
         listaNombresJugadores.push(nombre);
         console.log(`Jugador ${nombre} agregado exitosamente.`); 
